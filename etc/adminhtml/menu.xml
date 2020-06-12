@@ -1,0 +1,9 @@
+<!--
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ChrisMallory_CodeSample::data" title="Chris Mallory Code Sample" module="ChrisMallory_CodeSample" sortOrder="75" resource="ChrisMallory_CodeSample::data"
+             action="codesample/data/index"/>
+    </menu>
+</config>

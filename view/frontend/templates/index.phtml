@@ -1,0 +1,33 @@
+<?php $jsonProductData = $block->getProductCollectionJsonData(); ?>
+<?php $notice = $block->getNotice() ?>
+<div id="knockout-template" data-bind="scope:'challenge'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+       {
+           "#knockout-template": {
+               "Magento_Ui/js/core/app": {
+                   "components": {
+                       "challenge": {
+                            "component": "ChrisMallory_CodeSample/js/view/data",
+                            "items": <?php echo $jsonProductData ?>,
+                            "notice": <?php echo $notice ?>
+                        }
+                   }
+               }
+           },
+           "*": {
+            "Magento_Ui/js/block-loader": "<?= /* @escapeNotVerified */ $block->getViewFileUrl('images/loader-1.gif') ?>"
+    }
+       }
+   </script>
+
+    <script>
+        require([
+            'mage/url',
+            'Magento_Ui/js/block-loader'
+        ], function(url, blockLoader) {
+            blockLoader("<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>");
+            return url.setBaseUrl('<?php /* @escapeNotVerified */ echo $block->getBaseUrl();?>');
+        })
+    </script>
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "chrismallory/module-codesample",
+  "description": "Chris Mallory Coding Sample",
+  "version": "1.0.0",
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "ChrisMallory\\CodeSample\\": ""
+    }
+  }
+}
